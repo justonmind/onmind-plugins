@@ -3,7 +3,7 @@
 			'use strict';
 			$.fn.keepAspect = function(options) {
 				var defaults = {
-					aspect: 1
+					ratio: 1
 				};
 
 				var s = $.extend({}, defaults, options);
@@ -11,14 +11,24 @@
 				return this.each(function() {
 					var me 				= this;
 					var events 		= 'resize orientationchange';
-					var aspect		= s.aspect;
+					var ratio			= s.ratio;
+
+					init();
 
 					$(window).on(events, function() {
+						setHeight();
+					});
+
+					function init() {
+						setHeight();
+					}
+
+					function setHeight() {
 						var width = $(me).outerWidth();
-						var height = width * aspect;
+						var height = width * ratio;
 
 						$(me).outerHeight(height);
-					});
+					}
 				});
 			};
 		})();
