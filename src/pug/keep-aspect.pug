@@ -1,0 +1,25 @@
+doctype html
+html
+	head
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title keepAspect | Onmind Plugins
+		link(rel="stylesheet", href="css/styles.min.css")
+	body.keep-aspect-body
+		.aspects
+			.aspects__row
+				.aspect.aspect_01
+					p.aspect__label ratio 0.17
+			.aspects__row
+				.aspect.aspect_02
+					p.aspect__label ratio 1
+				.aspect.aspect_03
+					p.aspect__label ratio 2.5
+				.aspect.aspect_04
+					p.aspect__label ratio 0.5
+		script(src='vendors/jQuery/jquery.min.js')
+		script(src='js/onmind.plugins.min.js')
+		script.
+			$('.aspect_01').keepAspect({ratio: .17});
+			$('.aspect_02').keepAspect({ratio: 1});
+			$('.aspect_03').keepAspect({ratio: 2.5});
+			$('.aspect_04').keepAspect({ratio: .5});
