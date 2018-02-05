@@ -1,6 +1,6 @@
 {
   "name": "onmind-plugins",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "100% free javascript plugins for OnmindFramework, using jQuery",
   "main": "index.js",
   "scripts": {
