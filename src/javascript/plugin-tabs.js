@@ -28,7 +28,7 @@
 			function init() {
 				setSelect(0);
 				setTab(0);
-				setContents(3, 0);
+				setContents(0, 0);
 			}
 
 			function setSelect(idx) {
